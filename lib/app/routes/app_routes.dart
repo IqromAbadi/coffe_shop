@@ -9,6 +9,9 @@ abstract class Routes {
   static const MILK_BASE = _Paths.MILK_BASE;
   static const MANUAL_BREW = _Paths.MANUAL_BREW;
   static const TEA = _Paths.TEA;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
+  static const CART = _Paths.CART;
+  static const FAVORITE = _Paths.FAVORITE;
 }
 
 abstract class _Paths {
@@ -19,4 +22,7 @@ abstract class _Paths {
   static const MILK_BASE = '/milk-base';
   static const MANUAL_BREW = '/manual-brew';
   static const TEA = '/tea';
+  static const NOTIFICATION = '/notification';
+  static const CART = '/cart';
+  static const FAVORITE = '/favorite';
 }
