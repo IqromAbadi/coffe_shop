@@ -1,7 +1,6 @@
-import 'package:coffe/app/modules/AllCoffe/views/all_coffe_view.dart';
-import 'package:coffe/app/modules/ManualBrew/views/manual_brew_view.dart';
-import 'package:coffe/app/modules/MilkBase/views/milk_base_view.dart';
-import 'package:coffe/app/modules/Tea/views/tea_view.dart';
+import 'package:coffe/app/modules/cart/views/cart_view.dart';
+import 'package:coffe/app/modules/favorite/views/favorite_view.dart';
+import 'package:coffe/app/modules/notification/views/notification_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -193,7 +192,7 @@ class HomeView extends GetView<HomeController> {
                             padding: const EdgeInsets.symmetric(horizontal: 18),
                             child: ElevatedButton(
                               onPressed: () {
-                                controller.changeTabIndex(index);
+                                controller.changeBottomNavIndex(index);
                               },
                               style: ElevatedButton.styleFrom(
                                 minimumSize: const Size(150, 40),
@@ -237,15 +236,30 @@ class HomeView extends GetView<HomeController> {
         ),
         body: Obx(
           () => IndexedStack(
-            index: controller.currentIndex.value,
+            index: controller.currentbottomnavIndex.value,
             children: const [
-              AllCoffeView(),
-              MilkBaseView(),
-              ManualBrewView(),
-              TeaView(),
+              Column(
+                children: [
+                  Text("INI HOME"),
+                ],
+              ),
+              FavoriteView(),
+              CartView(),
+              NotificationView(),
             ],
           ),
         ),
+        bottomNavigationBar: Obx(() {
+          return BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.white,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            currentIndex: controller.currentbottomnavIndex.value,
+            onTap: controller.changeBottomNavIndex,
+            items: controller.getBottomNavigationBarItems(),
+          );
+        }),
       ),
     );
   }
