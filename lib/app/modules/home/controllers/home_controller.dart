@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   //TAB BAR
-  var tabIndex = 0.obs;
   var currentIndex = 0.obs;
 
   final List<String> buttonText = [
@@ -19,7 +18,6 @@ class HomeController extends GetxController {
   }
 
   //BOTTOM NAVBAR
-  var tabbottomnavIndex = 0.obs;
   var currentbottomnavIndex = 0.obs;
 
   void changeBottomNavIndex(int index) {
@@ -76,9 +74,11 @@ class HomeController extends GetxController {
               right: 0,
               child: Container(
                 height: 5,
-                decoration: const BoxDecoration(
-                    color: const Color(0xffC67C4E),
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                width: 5,
+                decoration: BoxDecoration(
+                  color: const Color(0xffC67C4E),
+                  borderRadius: BorderRadius.circular(2),
+                ),
               ),
             ),
         ],
