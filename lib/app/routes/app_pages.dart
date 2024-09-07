@@ -10,6 +10,8 @@ import '../modules/Tea/bindings/tea_binding.dart';
 import '../modules/Tea/views/tea_view.dart';
 import '../modules/cart/bindings/cart_binding.dart';
 import '../modules/cart/views/cart_view.dart';
+import '../modules/description_products/bindings/description_products_binding.dart';
+import '../modules/description_products/views/description_products_view.dart';
 import '../modules/favorite/bindings/favorite_binding.dart';
 import '../modules/favorite/views/favorite_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -71,6 +73,18 @@ class AppPages {
       name: _Paths.FAVORITE,
       page: () => const FavoriteView(),
       binding: FavoriteBinding(),
+    ),
+    GetPage(
+      name: _Paths.DESCRIPTION_PRODUCTS,
+      page: () => const DescriptionProductsView(),
+      binding: DescriptionProductsBinding(),
+      children: [
+        GetPage(
+          name: _Paths.DESCRIPTION_PRODUCTS,
+          page: () => const DescriptionProductsView(),
+          binding: DescriptionProductsBinding(),
+        ),
+      ],
     ),
   ];
 }

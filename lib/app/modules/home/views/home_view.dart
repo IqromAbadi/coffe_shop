@@ -59,7 +59,7 @@ class HomeView extends GetView<HomeController> {
                                   Row(
                                     children: [
                                       const Text(
-                                        "Bilzen, Tanjungbalai",
+                                        "Purwokerto",
                                         style: TextStyle(
                                           fontSize: 18,
                                           color: Colors.white,

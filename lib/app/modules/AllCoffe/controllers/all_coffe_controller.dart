@@ -18,24 +18,36 @@ class AllCoffeController extends GetxController {
         const Duration(seconds: 2)); // Simulate a network delay
     var fetchAllCoffe = [
       AllCoffe(
-        name: "Latte",
+        name: "Mocha Latte",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec purus. Nunc sed odio. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus.",
         imageUrl: "assets/images/coffe1.png",
-        price: 4.5,
+        price: "20.000",
+        rate: "4.5",
       ),
       AllCoffe(
-        name: "Cappuccino",
+        name: "Flat White",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec purus. Nunc sed odio. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus.",
         imageUrl: "assets/images/coffe2.png",
-        price: 4.0,
+        price: "21.000",
+        rate: "4.5",
       ),
       AllCoffe(
-        name: "Espresso",
+        name: "Capuccino",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec purus. Nunc sed odio. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus.",
         imageUrl: "assets/images/coffe3.png",
-        price: 3.0,
+        price: "20.000",
+        rate: "4.5",
       ),
       AllCoffe(
-        name: "Americano",
+        name: "Macchiato",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec purus. Nunc sed odio. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus. Sed nec odio. Ut sit amet purus.",
         imageUrl: "assets/images/coffe4.png",
-        price: 3.5,
+        price: "20.000",
+        rate: "4.5",
       ),
     ];
 
